@@ -15,11 +15,11 @@ namespace FirstGUIApp {
 	public ref class Result : public System::Windows::Forms::Form
 	{
 	public:
-		String^ nameToDisplay;
-		String^ ageToDisplay;
+		String^ nameToDisplay = "user";
+		String^ ageToDisplay = "N/A";
 		String^ sourceToDisplay;
 		String^ destinationToDisplay;
-		String^ minCostToDisplay;
+		String^ minCostToDisplay = "0";
 		Result(String^ _name, String^ _age, String^ _source, String^ _destination, String^ _minCost)
 		{
 			InitializeComponent();
@@ -98,9 +98,10 @@ namespace FirstGUIApp {
 			this->userInfo->ForeColor = System::Drawing::SystemColors::HighlightText;
 			this->userInfo->Location = System::Drawing::Point(0, 132);
 			this->userInfo->Name = L"userInfo";
+			this->userInfo->Padding = System::Windows::Forms::Padding(50, 0, 50, 0);
 			this->userInfo->Size = System::Drawing::Size(630, 67);
 			this->userInfo->TabIndex = 2;
-			this->userInfo->Text = L"Name:";
+			this->userInfo->Text = L"Hello Sahil (34y/o), below are your results\r\n\r\n";
 			this->userInfo->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
 			// label12
@@ -134,7 +135,7 @@ namespace FirstGUIApp {
 			this->label1->ForeColor = System::Drawing::SystemColors::HighlightText;
 			this->label1->Location = System::Drawing::Point(59, 489);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(423, 59);
+			this->label1->Size = System::Drawing::Size(348, 59);
 			this->label1->TabIndex = 6;
 			this->label1->Text = L"Minimum Cost:";
 			this->label1->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
@@ -144,7 +145,7 @@ namespace FirstGUIApp {
 			this->minCost->Font = (gcnew System::Drawing::Font(L"Arial", 19.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->minCost->ForeColor = System::Drawing::SystemColors::HighlightText;
-			this->minCost->Location = System::Drawing::Point(413, 500);
+			this->minCost->Location = System::Drawing::Point(381, 500);
 			this->minCost->Name = L"minCost";
 			this->minCost->Size = System::Drawing::Size(149, 38);
 			this->minCost->TabIndex = 7;
@@ -177,8 +178,8 @@ namespace FirstGUIApp {
 			// 
 			// Result
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
-			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->AutoScaleDimensions = System::Drawing::SizeF(120, 120);
+			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Dpi;
 			this->BackColor = System::Drawing::Color::RoyalBlue;
 			this->ClientSize = System::Drawing::Size(630, 589);
 			this->Controls->Add(this->destination);
@@ -194,6 +195,7 @@ namespace FirstGUIApp {
 			this->MinimizeBox = false;
 			this->Name = L"Result";
 			this->ShowIcon = false;
+			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Trip Optimizer";
 			this->Load += gcnew System::EventHandler(this, &Result::Result_Load);
 			this->ResumeLayout(false);
@@ -205,7 +207,7 @@ namespace FirstGUIApp {
 			userInfo->Text = "Hello " + nameToDisplay + " (" + ageToDisplay + "y/o), below are your optimized results";
 			source->Text = sourceToDisplay;
 			destination->Text = destinationToDisplay;
-			minCost->Text = minCostToDisplay;
+			minCost->Text = "Rs. " + minCostToDisplay;
 		}
 };
 }

@@ -1,6 +1,1 @@
-﻿  About.cpp
-  MyForm.cpp
-  Result.cpp
-  Generating Code...
-  About.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
-  FirstGUIApp.vcxproj -> C:\Users\sahil\source\repos\FirstGUIApp\Debug\FirstGUIApp.exe
+﻿  MyForm.cpp

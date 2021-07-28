@@ -27,7 +27,7 @@ int minCost = 0;
 bool visited[V] = { false };
 int graph[V][V];
 
-int minimumCostSimplePath(int u, int destination)
+int minimumCostSimplePath(int u=0, int destination=0)
 {
     // check if we find the destination
     // then further cost will be 0
@@ -92,6 +92,7 @@ int main()
 
     Application::EnableVisualStyles();
     Application::SetCompatibleTextRenderingDefault(false);
+
     FirstGUIApp::MyForm^ first = gcnew FirstGUIApp::MyForm();
     first->FormClosed += gcnew FormClosedEventHandler(ExitWhenLastWindowClosed);
     first->Show();
