@@ -1,0 +1,5 @@
+C:\Users\sahil\source\repos\FirstGUIApp\FirstGUIApp\Debug\FirstGUIApp.vcxproj.AssemblyReference.cache
+C:\Users\sahil\source\repos\FirstGUIApp\FirstGUIApp\Debug\FirstGUIApp.MyForm.resources
+C:\Users\sahil\source\repos\FirstGUIApp\FirstGUIApp\Debug\FirstGUIApp.vcxproj.GenerateResource.cache
+C:\Users\sahil\source\repos\FirstGUIApp\FirstGUIApp\Debug\FirstGUIApp.About.resources
+C:\Users\sahil\source\repos\FirstGUIApp\FirstGUIApp\Debug\FirstGUIApp.Result.resources
